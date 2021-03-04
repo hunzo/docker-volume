@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+    server-03:
+        image: alpine
+        stdin_open: true
+        tty: true
+        volumes: 
+            - volcerts:/ssl
+volumes: 
+    volcerts:
+        external: true
