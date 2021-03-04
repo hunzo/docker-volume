@@ -1,20 +1,20 @@
 # Demo Docker Volume
-## Create Container Volume
+## Create Container Volumes
 ```bash
 docker create -v volcerts:/ssl --name certs-data alpine
 ```
-## Start Container with Container Volume
+## Start Container with Container Volumes
 ```bash
 docker run --name server-01 --volumes-from certs-data -dit alpine
 ```
 ```bash
 docker run --name server-01 --volumes-from certs-data -dit alpine
 ```
-## Test Copy file to Conatiner volume
+## Test Copy file to Container volumes
 ```bash
 docker cp testfile server-01:/ssl
 ```
-## Using docker-compose.yml used volume
+## Example docker-compose using Container volumes
 ```yml
 version: '3.7'
 services: 
